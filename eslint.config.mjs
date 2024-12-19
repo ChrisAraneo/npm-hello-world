@@ -18,13 +18,5 @@ export default tseslint.config(
       'jsonc/no-comments': 'error',
       'jsonc/sort-keys': 'error',
     },
-    ignores: [
-      'node_modules/',
-      '.git/',
-      'package.json',
-      'package-lock.json',
-      'reports/',
-      '.stryker-tmp/',
-    ],
   },
 );

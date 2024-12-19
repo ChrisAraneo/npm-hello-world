@@ -18,13 +18,14 @@
     }
   },
   "scripts": {
-    "lint": "eslint \"**/*.{ts,json,js,mjs,cjs}\" --fix",
+    "lint": "eslint \"src/*.{ts,json,js,mjs,cjs}\" --fix --ignore-pattern \".stryker-tmp\"",
     "format": "prettier --write \"**/*.{ts,json,js,mjs,cjs}\"",
     "chores": "npm run lint && npm run format",
     "build": "tsup ./src",
     "dev": "tsup --watch",
     "test": "vitest run",
-    "test:watch": "vitest"
+    "test:watch": "vitest",
+    "stryker": "npx stryker run"
   },
   "keywords": [
     "typescript",
@@ -42,6 +43,7 @@
   },
   "homepage": "https://github.com/ChrisAraneo/npm-hello-world#readme",
   "devDependencies": {
+    "@stryker-mutator/vitest-runner": "^8.7.1",
     "eslint": "^9.17.0",
     "eslint-plugin-jsonc": "^2.18.2",
     "eslint-plugin-simple-import-sort": "^12.1.1",
