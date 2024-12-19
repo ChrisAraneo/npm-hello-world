@@ -1,0 +1,46 @@
+{
+  "name": "@chris.araneo/npm-hello-world",
+  "version": "0.0.1",
+  "description": "Hello World!",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "private": false,
+  "files": [
+    "dist",
+    "package.json"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.js",
+      "import": "./dist/index.mjs"
+    }
+  },
+  "scripts": {
+    "build": "tsup ./src",
+    "dev": "tsup --watch",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "keywords": [
+    "typescript",
+    "library"
+  ],
+  "author": "Krzysztof Pająk (Chris Araneo)",
+  "email": "chris.araneo@gmail.com",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChrisAraneo/npm-hello-world.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ChrisAraneo/npm-hello-world/issues"
+  },
+  "homepage": "https://github.com/ChrisAraneo/npm-hello-world#readme",
+  "devDependencies": {
+    "tsup": "^8.3.5",
+    "typescript": "^5.7.2",
+    "vitest": "^2.1.8"
+  }
+}
