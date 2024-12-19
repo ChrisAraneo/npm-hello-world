@@ -1,16 +1,16 @@
 {
-  "include": ["src"],
-  "exclude": ["**/*.test.ts"],
   "compilerOptions": {
-    "module": "esnext",
-    "target": "esnext",
-    "lib": ["esnext"],
     "declaration": true,
-    "strict": true,
-    "moduleResolution": "node",
-    "skipLibCheck": true,
     "esModuleInterop": true,
+    "lib": ["esnext"],
+    "module": "esnext",
+    "moduleResolution": "node",
     "outDir": "dist",
-    "rootDir": "src"
-  }
+    "rootDir": "src",
+    "skipLibCheck": true,
+    "strict": true,
+    "target": "esnext"
+  },
+  "exclude": ["**/*.test.ts"],
+  "include": ["src"]
 }
